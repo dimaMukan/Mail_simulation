@@ -3,7 +3,7 @@
 ###            MailboxAgent Class                                                             ###
 ###            <describe the purpose and overall functionality of the class defined here>     ###
 ### Partner A:                                                                                ###
-###            <Full name as appears on Moodle>, SID<student ID>                              ###
+###                              Dmytro Mukan, 1475561                                        ###
 ### Partner B:                                                                                ###
 ###            <Full name as appears on Moodle>, SID<student ID>                              ###
 #################################################################################################
@@ -16,7 +16,7 @@ from Confidential import *
 from Personal import *
 
 class MailboxAgent:
-    """<This is the documentation for MailboxAgent. Complete the docstring for this class."""
+    """<This is the documentation for MailboxAgent. Complete the docstring for this class.""" #---------------------------------------------------------
     def __init__(self, email_data):                       # DO NOT CHANGE
         self._mailbox = self.__gen_mailbox(email_data)    # data structure containing Mail objects DO NOT CHANGE
 
@@ -40,7 +40,7 @@ class MailboxAgent:
     # 
     def get_email(self, m_id):
         """ """
-        pass
+        return self._mailbox
 
     # FA.3
     # 

@@ -3,7 +3,7 @@
 ###            Mail Class                                                             ###
 ###            <describe the purpose and overall functionality of the class defined here>     ###
 ### Partner A:                                                                                ###
-###            <Full name as appears on Moodle>, SID<student ID>                              ###
+###                              Dmytro Mukan, 1475561                                        ###
 ### Partner B:                                                                                ###
 ###            <Full name as appears on Moodle>, SID<student ID>                              ###
 #################################################################################################
@@ -15,7 +15,7 @@
 class Mail:
     """ """
     # DO NOT CHANGE CLASS OR METHOD NAMES
-    def  __init__(self,m_id,frm,to,date,subject,tag,body):
+    def __init__(self,m_id,frm,to,date,subject,tag,body):
         self._m_id = m_id
         self._frm = frm
         self._to = to
