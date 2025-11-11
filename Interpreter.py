@@ -5,7 +5,7 @@
 ###            automatically in response to user commands via an interactive command-line     ###
 ###            interface. The interpreter represents the user interacting with their mailbox. ###
 ### Partner A:                                                                                ###
-###            <Full name as appears on Moodle>, SID<student ID>                              ###
+###                              Dmytro Mukan, 1475561                                        ###
 ### Partner B:                                                                                ###
 ###            <Full name as appears on Moodle>, SID<student ID>                              ###
 #################################################################################################
@@ -13,8 +13,11 @@
 # DO NOT CHANGE FUNCTION NAMES
 # replace "pass" with your own code as specified in the CW spec.
 
+import random
+import string
 from MailboxAgent import *
-import random, string
+from pprint import pprint
+
 
 # gen_bdy Generates random text for the email body
 # DO NOT MODIFY
@@ -84,12 +87,29 @@ def loop():
             # Partners A and B
             # Replace each pass statement below with a call to the relevant mba methods as described in the CW spec
             # FA/B.6
+
+            case 'get':
+                try:
+                    if args:
+                        id = int(args[0])
+                        res = mba.get_email(id)
+                        if res:
+                            print(res)
+                    else:
+                        raise ValueError('No <id> is given')
+                except ValueError as er:
+                    print(f'Error: {er}')
+
+
             case 'add':
                 # example command prompt:
                 # add email1223@gre.ac.uk email723@gre.ac.uk 29/5/2025 subject99 conf %%Body99911. Isfeo afwco sxzmp.
                 # add email142@gre.ac.uk email788@gre.ac.uk 29/5/2025 subject88 prsnl %%Body11332. Isfffffeo sxzmp.
                 # add email116@gre.ac.uk email142@gre.ac.uk 29/5/2025 subject36 tag1 %%Body:Body68. Wods vmm tskgdrxzrk.
                 pass
+
+
+
             case 'del':  # move email with given ID to bin folder
                 # example command prompt:
                 # del 10
@@ -98,13 +118,12 @@ def loop():
                 # example command prompt:
                 # flt email13
                 pass
+
+
+
             case 'fnd':
                 # example command prompt:
                 # fnd 12/3/2025
-                pass
-            case 'get' :                # retrieve and display email Mail object given email ID
-                # example command prompt:
-                # get 10
                 pass
             case 'lst' :                # display entire mailbox
                 # example command prompt:

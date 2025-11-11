@@ -3,7 +3,7 @@
 ###            Confidential Class                                                             ###
 ###            <describe the purpose and overall functionality of the class defined here>     ###
 ### Partner A:                                                                                ###
-###            <Full name as appears on Moodle>, SID<student ID>                              ###
+###                              Dmytro Mukan, 1475561                                        ###
 #################################################################################################
 
 # DO NOT CHANGE CLASS OR METHOD NAMES
