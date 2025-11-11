@@ -77,7 +77,6 @@ def display_command_help(): # DO NOT MODIFY (used in loop function)
 # - Completed as a group
 def loop():
     mba = MailboxAgent(gen_emails())    # mba is an instance of the MailboxAgent class DO NOT MODIFY
-    print(gen_emails()[0])
     display_command_help()              # simply display the interpreter command-line commands as help
     line = input('mba > ')              # displays a command-line prompter for users to enter command script
     words = line.split(' ')             # separates the command from the script arguments
@@ -89,10 +88,17 @@ def loop():
             # Replace each pass statement below with a call to the relevant mba methods as described in the CW spec
             # FA/B.6
 
-            case 'get':  # retrieve and display email Mail object given email ID
-                # example command prompt:
-                # get 10
-                pass
+            case 'get':
+                try:
+                    if args:
+                        id = int(args[0])
+                        res = mba.get_email(id)
+                        if res:
+                            print(res)
+                    else:
+                        raise ValueError('No <id> is given')
+                except ValueError as er:
+                    print(f'Error: {er}')
 
 
             case 'add':
@@ -119,13 +125,6 @@ def loop():
                 # example command prompt:
                 # fnd 12/3/2025
                 pass
-
-
-
-
-
-
-
             case 'lst' :                # display entire mailbox
                 # example command prompt:
                 # lst

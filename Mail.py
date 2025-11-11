@@ -12,6 +12,9 @@
 # DO NOT CHANGE CLASS OR METHOD NAMES
 # replace "pass" with your own code as specified in the CW spec.
 
+from pprint import pprint, pformat
+
+
 class Mail:
     """ """
     # DO NOT CHANGE CLASS OR METHOD NAMES
@@ -29,7 +32,18 @@ class Mail:
 
     # Format should be done from pretty print.
     def __str__(self):
-        return f"m_id:{self.m_id}\tfrom:{self.frm}\t|{self.to}\t|{self.date}|{self.subject}|{self.tag}|{self.read}|{self.flag}"
+        mail_dict = {
+            "ID": self._m_id,
+            "From": self._frm,
+            "To": self._to,
+            "Date": self._date,
+            "Subject": self._subject,
+            "Tag": self._tag,
+            "Body": self._body,
+            "Flag": self._flag,
+            "Read": self._read
+        }
+        return pformat(mail_dict, indent=4, sort_dicts=False)
 
     @property
     def m_id(self):

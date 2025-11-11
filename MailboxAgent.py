@@ -14,6 +14,8 @@
 from Mail import *
 from Confidential import *
 from Personal import *
+from pprint import pprint
+
 
 class MailboxAgent:
     """<This is the documentation for MailboxAgent. Complete the docstring for this class.""" #---------------------------------------------------------
@@ -40,12 +42,21 @@ class MailboxAgent:
     # 
     def get_email(self, m_id):
         """ """
-        return self._mailbox
+        try:
+            if 0 <= m_id <= len(self._mailbox) - 1:
+                return self._mailbox[m_id]
+            else:
+                raise ValueError('Invalid ID')
+        except ValueError as er:
+            print(f'Error: {er}')
+
+
 
     # FA.3
     # 
     def del_email(self, m_id):
         """  """
+
         pass
 
     # FA.4
