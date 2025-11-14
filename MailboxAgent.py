@@ -37,39 +37,65 @@ class MailboxAgent:
                      msg[4].split(":")[1], msg[5].split(":")[1], msg[6].split(":")[1]))
         return mailbox
 
+
+    def find_by(self):
+        ...
+
+
+
 # FEATURES A (Partner A)
     # FA.1
     # 
     def get_email(self, m_id):
         """ """
         try:
-            if 0 <= m_id <= len(self._mailbox) - 1:
-                return self._mailbox[m_id]
+            if m_id:
+                m_id = int(m_id[0])
+                if not isinstance(m_id, int):
+                    raise ValueError('ID must be an integer')
+                if 0 <= m_id <= len(self._mailbox) - 1:
+                    return self._mailbox[m_id]
+                else:
+                    raise ValueError('Invalid ID')
             else:
-                raise ValueError('Invalid ID')
+                raise ValueError('ID was not provided')
         except ValueError as er:
             print(f'Error: {er}')
-
 
 
     # FA.3
     # 
     def del_email(self, m_id):
         """  """
-
-        pass
+        ...
 
     # FA.4
     # 
     def filter(self, frm):
         """  """
-        pass
+        try:
+            if not frm:
+                raise ValueError('Invalid mailbox')
+            else:
+                a = [mail for mail in self._mailbox if mail.frm == frm[0]]
+                res = 0
+                for i in a:
+                    print(vars(i))
+                    res += 1
+                if res == 0:
+                    raise ValueError('No such mailbox')
+        except ValueError as er:
+            print(f'Error: {er}')
+
 
     # FA.5
     # 
     def sort_date(self):
         """  """
         pass
+
+
+
 
 
 # FEATURES B (Partner B)
