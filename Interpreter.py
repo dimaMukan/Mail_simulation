@@ -88,7 +88,7 @@ def loop():
         def _get_by_id(item):
             your_item = mba.get_email(item)
             if your_item:
-                # print(your_item)
+                print(your_item)
                 return your_item
 
         match command:
@@ -106,8 +106,6 @@ def loop():
                 print(del_item.tag)
 
             case 'flt':
-                # example command prompt:
-                # flt email13
                 mba.filter(args)
 
 
