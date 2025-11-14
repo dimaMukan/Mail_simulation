@@ -43,12 +43,20 @@ class MailboxAgent:
     def get_email(self, m_id):
         """ """
         try:
-            if 0 <= m_id <= len(self._mailbox) - 1:
-                return self._mailbox[m_id]
+            if m_id:
+
+                m_id = int(m_id[0])
+                if not isinstance(m_id, int):
+                    raise ValueError('ID must be an integer')
+                if 0 <= m_id <= len(self._mailbox) - 1:
+                    return self._mailbox[m_id]
+                else:
+                    raise ValueError('Invalid ID')
             else:
-                raise ValueError('Invalid ID')
+                raise ValueError('ID was not provided')
         except ValueError as er:
             print(f'Error: {er}')
+
 
 
 
@@ -56,14 +64,14 @@ class MailboxAgent:
     # 
     def del_email(self, m_id):
         """  """
-
-        pass
+        ...
 
     # FA.4
     # 
     def filter(self, frm):
         """  """
-        pass
+        print(frm)
+        # for i in
 
     # FA.5
     # 

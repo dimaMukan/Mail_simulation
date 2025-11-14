@@ -83,22 +83,32 @@ def loop():
     command, args = words[0],words[1:]  # command is one of the interpreter script commands outlined in the help above
                                         # args is a list of arguments each command may take.
     while command != 'end':
+
+        #Feature from Partner A: for not repeating the code
+        def _get_by_id(item):
+            your_item = mba.get_email(item)
+            if your_item:
+                # print(your_item)
+                return your_item
+
         match command:
             # Partners A and B
             # Replace each pass statement below with a call to the relevant mba methods as described in the CW spec
             # FA/B.6
-
             case 'get':
-                try:
-                    if args:
-                        id = int(args[0])
-                        res = mba.get_email(id)
-                        if res:
-                            print(res)
-                    else:
-                        raise ValueError('No <id> is given')
-                except ValueError as er:
-                    print(f'Error: {er}')
+                _get_by_id(args)
+
+
+
+            case 'del':
+                del_item = _get_by_id(args)
+                del_item.tag = 'bin'
+                print(del_item.tag)
+
+            case 'flt':
+                # example command prompt:
+                # flt email13
+                mba.filter(args)
 
 
             case 'add':
@@ -110,14 +120,8 @@ def loop():
 
 
 
-            case 'del':  # move email with given ID to bin folder
-                # example command prompt:
-                # del 10
-                pass
-            case 'flt':
-                # example command prompt:
-                # flt email13
-                pass
+
+
 
 
 
