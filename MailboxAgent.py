@@ -17,6 +17,7 @@ from Personal import *
 from pprint import pprint
 
 
+
 class MailboxAgent:
     """<This is the documentation for MailboxAgent. Complete the docstring for this class.""" #---------------------------------------------------------
     def __init__(self, email_data):                       # DO NOT CHANGE
@@ -32,9 +33,17 @@ class MailboxAgent:
         mailbox = []
         for e in email_data:
             msg = e.split('\n')
-            mailbox.append(
-                Mail(msg[0].split(":")[1], msg[1].split(":")[1], msg[2].split(":")[1], msg[3].split(":")[1],
-                     msg[4].split(":")[1], msg[5].split(":")[1], msg[6].split(":")[1]))
+            tag = msg[5].split(":")[1]
+            if tag == 'CONFIDENTIAL':
+                mailbox.append(
+                    Confidential(msg[0].split(":")[1], msg[1].split(":")[1], msg[2].split(":")[1], msg[3].split(":")[1],
+                         msg[4].split(":")[1], msg[5].split(":")[1], msg[6].split(":")[1]))
+            if tag == 'PERSONAL':
+                ...
+            else:
+                mailbox.append(
+                    Mail(msg[0].split(":")[1], msg[1].split(":")[1], msg[2].split(":")[1], msg[3].split(":")[1],
+                         msg[4].split(":")[1], msg[5].split(":")[1], msg[6].split(":")[1]))
         return mailbox
 
 
@@ -80,7 +89,7 @@ class MailboxAgent:
                 a = [mail for mail in self._mailbox if mail.frm == frm[0]]
                 res = 0
                 for i in a:
-                    print(vars(i))
+                    i.show_email()
                     res += 1
                 if res == 0:
                     raise ValueError('No such mailbox')

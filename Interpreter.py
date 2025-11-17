@@ -37,6 +37,7 @@ def gen_emails():
     """ generates list of email strings
         :rtype: list """
     msgs, msg_id = [], 0
+    # choices = ['PUBLIC','CONFIDENTIAL']
     for i in range(40):     # sent 40 email
         msg = ''
         for j in range(30): # to 30 destinations each
@@ -46,6 +47,7 @@ def gen_emails():
             msg += f"Date:{random.randint(1, 29)}/{random.randint(0, 12)}/2025\n"
             msg += f"Subject:subject{random.randint(0, 100)}\n"
             msg += f"Tag:tag{random.randint(0, 6)}\n"
+            # msg += f"Tag:{random.choice(choices)}\n"
             msg += f"Body:{gen_bdy()}\n"
             msg += "Flag:False\n"
             msg += "Read:False\n"
@@ -88,7 +90,6 @@ def loop():
         def _get_by_id(item):
             your_item = mba.get_email(item)
             if your_item:
-                print(your_item)
                 return your_item
 
         match command:
@@ -96,14 +97,13 @@ def loop():
             # Replace each pass statement below with a call to the relevant mba methods as described in the CW spec
             # FA/B.6
             case 'get':
-                _get_by_id(args)
-
-
+                res = _get_by_id(args)
+                res.show_email()
 
             case 'del':
                 del_item = _get_by_id(args)
                 del_item.tag = 'bin'
-                print(del_item.tag)
+                del_item.show_email()
 
             case 'flt':
                 mba.filter(args)
