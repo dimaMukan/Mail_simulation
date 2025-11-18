@@ -67,8 +67,6 @@ class MailboxAgent:
 
 
 
-
-
     def save(self):
         try:
             with open('test_mailbox.txt', 'a') as test_mailbox:
