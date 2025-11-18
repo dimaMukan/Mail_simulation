@@ -42,11 +42,8 @@ class Mail:
             'Read': self._read,
             'Body': self._body
         }
-
-
-
         pretty_dict = pformat(mail_dict, indent=4,  sort_dicts=False)
-        return f"----- EMAIL START -----\n{pretty_dict}\n------ EMAIL END ------"
+        return f"\n----- EMAIL START -----\n{pretty_dict}\n------ EMAIL END ------\n"
 
     @property
     def m_id(self):
