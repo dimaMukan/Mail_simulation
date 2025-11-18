@@ -31,26 +31,53 @@ class MailboxAgent:
             :ivar: String
             :rtype: list  """
         mailbox = []
+        _saved_data = []
         for e in email_data:
             msg = e.split('\n')
+
+            m_id = msg[0].split(":")[1]
+            frm = msg[1].split(":")[1]
+            to = msg[2].split(":")[1]
+            date = msg[3].split(":")[1]
+            subject = msg[4].split(":")[1]
             tag = msg[5].split(":")[1]
+            body = msg[6].split(":")[1]
+
+            # tag = msg[5].split(":")[1]
             if tag == 'CONFIDENTIAL':
-                mailbox.append(
-                    Confidential(msg[0].split(":")[1], msg[1].split(":")[1], msg[2].split(":")[1], msg[3].split(":")[1],
-                         msg[4].split(":")[1], msg[5].split(":")[1], msg[6].split(":")[1]))
+                email_obj = Confidential(m_id, frm, to, date, subject, tag, body)
+
+                _saved_data.append({
+                    "id": m_id,
+                    "body": body,
+                    "encrypted_body": email_obj.body
+                })
+
             if tag == 'PERSONAL':
                 ...
             else:
                 mailbox.append(
                     Mail(msg[0].split(":")[1], msg[1].split(":")[1], msg[2].split(":")[1], msg[3].split(":")[1],
                          msg[4].split(":")[1], msg[5].split(":")[1], msg[6].split(":")[1]))
+
+        with open('test_mailbox.txt', 'w') as test_mailbox:
+            for i in _saved_data:
+                test_mailbox.write(str(i) + "\n")
         return mailbox
 
 
-    def find_by(self):
-        ...
 
 
+
+    def save(self):
+        try:
+            with open('test_mailbox.txt', 'a') as test_mailbox:
+                for i in self._mailbox:
+                    test_mailbox.write(f"{i.__str__()}\n\n")
+            print('Saved into txt')
+
+        except Exception as e:
+            print(f"Error while saving emails: {e}")
 
 # FEATURES A (Partner A)
     # FA.1
@@ -97,15 +124,22 @@ class MailboxAgent:
             print(f'Error: {er}')
 
 
+
+
+
+
+
+
+
+
     # FA.5
     # 
     def sort_date(self):
         """  """
         pass
 
-
-
-
+    def find_by(self):
+        ...
 
 # FEATURES B (Partner B)
     # FB.1
