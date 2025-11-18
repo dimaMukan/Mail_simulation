@@ -5,7 +5,7 @@
 ### Partner A:                                                                                ###
 ###                              Dmytro Mukan, 1475561                                        ###
 ### Partner B:                                                                                ###
-###            <Full name as appears on Moodle>, SID<student ID>                              ###
+###                              Anna Polishchuk, 001450312                                   ###
 #################################################################################################
 
 
@@ -15,7 +15,8 @@
 from pprint import pprint, pformat
 
 class Mail:
-    """ """
+    """Basic email class that stores sender, receiver, date, subject, tag, body and simple flags."""
+
     # DO NOT CHANGE CLASS OR METHOD NAMES
     def __init__(self,m_id,frm,to,date,subject,tag,body):
         self._m_id = m_id
