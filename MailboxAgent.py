@@ -135,22 +135,27 @@ class MailboxAgent:
 
     # FB.2 – move one email to a different folder (tag)
     def mv_email(self, m_id, tag):
-        """Move email with this ID to a new tag"""
-        for mail in self._mailbox:
-            if str(mail.m_id) == str(m_id):
-                mail.tag = tag
-                break
+        """Move email with this index to a new tag"""
+        try:
+            idx = int(m_id)
+            if 0 <= idx < len(self._mailbox):
+                self._mailbox[idx].tag = tag
+        except ValueError:
+            print("Error: ID must be a number")
 
     # FB.3 – mark email as read or flagged
     def mark(self, m_id, m_type):
         """Mark email as 'read' or 'flagged'"""
-        for mail in self._mailbox:
-            if str(mail.m_id) == str(m_id):
+        try:
+            idx = int(m_id)
+            if 0 <= idx < len(self._mailbox):
+                mail = self._mailbox[idx]
                 if m_type == "read":
                     mail.read = True
                 elif m_type == "flagged":
                     mail.flag = True
-                break
+        except ValueError:
+            print("Error: ID must be a number")
 
     # FB.4 – find all emails with a given date
     def find(self, date):

@@ -7,17 +7,13 @@
 ### Partner A:                                                                                ###
 ###                              Dmytro Mukan, 1475561                                        ###
 ### Partner B:                                                                                ###
-###            <Full name as appears on Moodle>, SID<student ID>                              ###
+###                              Anna Polishchuk, 001450312                                   ###
 #################################################################################################
-
-# DO NOT CHANGE FUNCTION NAMES
-# replace "pass" with your own code as specified in the CW spec.
 
 import random
 import string
 from MailboxAgent import *
 from pprint import pprint
-
 
 # gen_bdy Generates random text for the email body
 # DO NOT MODIFY
@@ -101,7 +97,8 @@ def loop():
             # FA/B.6
             case 'get':
                 res = _get_by_id(args)
-                res.show_email()
+                if res:
+                    res.show_email()
 
             case 'del':
                 del_item = _get_by_id(args)
@@ -120,39 +117,67 @@ def loop():
                 # add email116@gre.ac.uk email142@gre.ac.uk 29/5/2025 subject36 tag1 %%Body:Body68. Wods vmm tskgdrxzrk.
 
 
-
             case 'sf':
                 mba.sort_from()
                 mba.sort_conf_from()
 
-
-
-
-
-
-
-
-
+            # B.4 – find and display all emails received on a given date
             case 'fnd':
-                # example command prompt:
-                # fnd 12/3/2025
-                pass
+            # example command prompt:
+            # fnd 12/3/2025
+                if args:
+                    found = mba.find(args[0])
+                    for mail in found:
+                        mail.show_email()
+
+            # B.1 – display entire mailbox
             case 'lst':                # display entire mailbox
                 # example command prompt:
                 # lst
-                pass
+                mba.show_emails()
+
+            # B.3 – mark as read
             case 'mrkr':
                 # example command prompt:
                 # mrkr 10
-                pass
+                if args:
+                    mba.mark(args[0], "read")
+                    item = _get_by_id(args)
+                    if item:
+                        item.show_email()
+
+            # B.3 – mark as flagged
             case 'mrkf':
                 # example command prompt:
                 # mrkf 10
-                pass
+                if args:
+                    mba.mark(args[0], "flagged")
+                    item = _get_by_id(args)
+                    if item:
+                        item.show_email()
+
+            # B.2 – move email to another folder/tag
             case 'mv':                  # move email with given ID to folder in given tag
                 # example command prompt:
                 # mv 10 conf
-                pass
+                if len(args) >= 2:
+                    m_id, tag = args[0], args[1]
+                    mba.mv_email(m_id, tag)
+                    item = _get_by_id([m_id])
+                    if item:
+                        item.show_email()
+
+            # FB.7 – Persontology view (Personal)
+            case 'pl':
+                # call display_psnl once if there is at least one Personal
+                personal_found = False
+                for mail in mba._mailbox:
+                    if isinstance(mail, Personal):
+                        mail.display_psnl(mba._mailbox)
+                        personal_found = True
+                        break
+                if not personal_found:
+                    print("Persontology")
 
         line = input('mba > ')
         words = line.split(' ')
