@@ -33,12 +33,12 @@ def gen_bdy():
 #    Used to simulate emails in Outlook mailboxes
 #    The output is a string of emails that should be used in your code as required in the CW spec.
 # DO NOT MODIFY
-def gen_emails():
+def gen_emails(n=40):
     """ generates list of email strings
         :rtype: list """
     msgs, msg_id = [], 0
-    choices = ['PUBLIC','CONFIDENTIAL']
-    for i in range(40):     # sent 40 email
+    choices = ['PUBLIC','CONFIDENTIAL','PERSONAL']
+    for i in range(n):     # sent 40 email
         msg = ''
         for j in range(30): # to 30 destinations each
             msg += f"ID:{str(msg_id)}"+"\n"
@@ -113,11 +113,17 @@ def loop():
 
 
             case 'add':
+                mba.add_email(*args)
                 # example command prompt:
-                # add email1223@gre.ac.uk email723@gre.ac.uk 29/5/2025 subject99 conf %%Body99911. Isfeo afwco sxzmp.
+                # add email1223@gre.ac.uk email723@gre.ac.uk 29/5/2025 subject99 CONFIDENTIAL %%Body99911. Isfeo afwco sxzmp.
                 # add email142@gre.ac.uk email788@gre.ac.uk 29/5/2025 subject88 prsnl %%Body11332. Isfffffeo sxzmp.
                 # add email116@gre.ac.uk email142@gre.ac.uk 29/5/2025 subject36 tag1 %%Body:Body68. Wods vmm tskgdrxzrk.
-                ...
+
+
+
+            case 'sf':
+                mba.sort_from()
+                mba.sort_conf_from()
 
 
 
@@ -131,7 +137,7 @@ def loop():
                 # example command prompt:
                 # fnd 12/3/2025
                 pass
-            case 'lst' :                # display entire mailbox
+            case 'lst':                # display entire mailbox
                 # example command prompt:
                 # lst
                 pass

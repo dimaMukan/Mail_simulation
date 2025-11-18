@@ -43,4 +43,7 @@ class Confidential(Mail):
 
         return ''.join(res)
 
+    def display_conf(self):
+        print('S mur fiology encrypted')
+
 

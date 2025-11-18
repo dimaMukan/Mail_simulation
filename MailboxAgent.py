@@ -11,11 +11,12 @@
 # DO NOT CHANGE CLASS OR METHOD NAMES
 # replace "pass" with your own code as specified in the CW spec.
 
+import random
 from Mail import *
 from Confidential import *
 from Personal import *
 from pprint import pprint
-
+import uuid
 
 
 class MailboxAgent:
@@ -43,7 +44,6 @@ class MailboxAgent:
             tag = msg[5].split(":")[1]
             body = msg[6].split(":")[1]
 
-            # tag = msg[5].split(":")[1]
             if tag == 'CONFIDENTIAL':
                 email_obj = Confidential(m_id, frm, to, date, subject, tag, body)
 
@@ -121,20 +121,29 @@ class MailboxAgent:
         except ValueError as er:
             print(f'Error: {er}')
 
+    def sort_from(self):
+        sorted_emails = sorted(self._mailbox, key=lambda mail: mail.frm.lower())
+        with open("sorted_mailbox.txt", "w") as f:
+            for email in sorted_emails:
+                if email.tag == 'CONFIDENTIAL':
+                    f.write("=== CONFIDENTIAL EMAIL ===")
+                f.write(str(email))
+                f.write("\n\n")
+        print('Sorted and saved to <sorted_mailbox>')
+
+
+    def sort_conf_from(self):
+        sorted_emails = sorted(self._mailbox, key=lambda mail: mail.frm.lower())
+        with open("sorted_mailbox_confidential_only.txt", "w") as f:
+            for email in sorted_emails:
+                if email.tag == 'CONFIDENTIAL':
+                    f.write("=== CONFIDENTIAL EMAIL ===")
+                    f.write(str(email))
+                    f.write("\n\n")
+        print('Sorted and saved to <sorted_mailbox_confidential_only>')
 
 
 
-
-
-
-
-
-
-    # FA.5
-    # 
-    def sort_date(self):
-        """  """
-        pass
 
     def find_by(self):
         ...
@@ -166,24 +175,43 @@ class MailboxAgent:
 
     # FB.5
     # 
-    def sort_from(self):
+    def sort_date(self):
         """  """
         pass
 
 
 # FEATURE 6 (Partners A and B)
-    # 
-    def add_email(self, frm, to, date, subject, tag, body):
+
+    def add_email(self, *args):
         """  """
-        # code must generate unique m_id
-        match tag.lower():
+        frm, to, date, subject, tag = args[:5]
+        body = ''.join(args[5:]).replace('%','')
+        id = str(uuid.uuid4())
+        _email_obj = []
+        match tag:
             # FA.6
-            case 'conf':     # executed when tag is 'conf'
-                pass
+            case 'CONFIDENTIAL':
+                email_obj = Confidential(id,frm, to, date, subject, tag, body)
+                _body_temp = [{
+                    "id": id,
+                    "body": body,
+                    "encrypted_body": email_obj.body
+                }]
+                with open('test_mailbox.txt', 'a') as test_mailbox:
+                    for i in _body_temp:
+                        test_mailbox.write(f"\n{(str(i))}\n")
+                print('Saved into txt as a <Confidential email>')
             # FB.6
-            case 'prsnl':    # executed when tag is 'prsnl'
+            case 'PERSONAL':
                 pass
             # FA&B.6
-            case _:          # executed when tag is neither 'conf' nor 'prsnl'
-                pass
-        pass
+            case _:
+                email_obj = Mail(id,frm, to, date, subject, tag, body)
+                print('Saved into txt ')
+
+        with open('test_mailbox.txt', 'a') as test_mailbox:
+            test_mailbox.write(email_obj.__str__())
+
+    # add email1223@gre.ac.uk email723@gre.ac.uk 29/5/2025 subject99 CONFIDENTIAL %%Body99911. Isfeo afwco sxzmp.
+    # add email142@gre.ac.uk email788@gre.ac.uk 29/5/2025 subject88 PERSONAL %%Body11332. Isfffffeo sxzmp.
+    # add email116@gre.ac.uk email142@gre.ac.uk 29/5/2025 subject36 tag1 %%Body:Body68. Wods vmm tskgdrxzrk.
