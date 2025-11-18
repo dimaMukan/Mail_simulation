@@ -37,6 +37,7 @@ def gen_emails():
     """ generates list of email strings
         :rtype: list """
     msgs, msg_id = [], 0
+    choices = ['PUBLIC','CONFIDENTIAL']
     for i in range(40):     # sent 40 email
         msg = ''
         for j in range(30): # to 30 destinations each
@@ -45,7 +46,8 @@ def gen_emails():
             msg += f"To:email{random.randint(0, 80)}@gre.ac.uk\n"
             msg += f"Date:{random.randint(1, 29)}/{random.randint(0, 12)}/2025\n"
             msg += f"Subject:subject{random.randint(0, 100)}\n"
-            msg += f"Tag:tag{random.randint(0, 6)}\n"
+            # msg += f"Tag:tag{random.randint(0, 6)}\n"
+            msg += f"Tag:{random.choice(choices)}\n"
             msg += f"Body:{gen_bdy()}\n"
             msg += "Flag:False\n"
             msg += "Read:False\n"
@@ -82,28 +84,29 @@ def loop():
     words = line.split(' ')             # separates the command from the script arguments
     command, args = words[0],words[1:]  # command is one of the interpreter script commands outlined in the help above
                                         # args is a list of arguments each command may take.
+
+    # Feature from Partner A: for not repeating the code
+    def _get_by_id(item):
+        your_item = mba.get_email(item)
+        if your_item:
+            return your_item
+
     while command != 'end':
 
-        #Feature from Partner A: for not repeating the code
-        def _get_by_id(item):
-            your_item = mba.get_email(item)
-            if your_item:
-                print(your_item)
-                return your_item
-
         match command:
+            case 'save':
+                mba.save()
             # Partners A and B
             # Replace each pass statement below with a call to the relevant mba methods as described in the CW spec
             # FA/B.6
             case 'get':
-                _get_by_id(args)
-
-
+                res = _get_by_id(args)
+                res.show_email()
 
             case 'del':
                 del_item = _get_by_id(args)
                 del_item.tag = 'bin'
-                print(del_item.tag)
+                del_item.show_email()
 
             case 'flt':
                 mba.filter(args)
@@ -114,7 +117,8 @@ def loop():
                 # add email1223@gre.ac.uk email723@gre.ac.uk 29/5/2025 subject99 conf %%Body99911. Isfeo afwco sxzmp.
                 # add email142@gre.ac.uk email788@gre.ac.uk 29/5/2025 subject88 prsnl %%Body11332. Isfffffeo sxzmp.
                 # add email116@gre.ac.uk email142@gre.ac.uk 29/5/2025 subject36 tag1 %%Body:Body68. Wods vmm tskgdrxzrk.
-                pass
+                ...
+
 
 
 

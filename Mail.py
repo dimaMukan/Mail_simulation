@@ -14,7 +14,6 @@
 
 from pprint import pprint, pformat
 
-
 class Mail:
     """ """
     # DO NOT CHANGE CLASS OR METHOD NAMES
@@ -33,17 +32,21 @@ class Mail:
     # Format should be done from pretty print.
     def __str__(self):
         mail_dict = {
-            "ID": self._m_id,
-            "From": self._frm,
-            "To": self._to,
-            "Date": self._date,
-            "Subject": self._subject,
-            "Tag": self._tag,
-            "Body": self._body,
-            "Flag": self._flag,
-            "Read": self._read
+            'ID': self._m_id,
+            'From': self._frm,
+            'To': self._to,
+            'Date': self._date,
+            'Subject': self._subject,
+            'Tag': self._tag,
+            'Flag': self._flag,
+            'Read': self._read,
+            'Body': self._body
         }
-        return pformat(mail_dict, indent=4, sort_dicts=False)
+
+
+
+        pretty_dict = pformat(mail_dict, indent=4,  sort_dicts=False)
+        return f"----- EMAIL START -----\n{pretty_dict}\n------ EMAIL END ------"
 
     @property
     def m_id(self):
@@ -98,5 +101,35 @@ class Mail:
     # FA.2
     #
     def show_email(self):
-        """  """
-        pass
+        """Print the email in a nice formatted view."""
+        email_type = self._tag.lower()
+
+        if email_type == "confidential":
+            header = "CONFIDENTIAL EMAIL"
+            body_label = "Body (ENCRYPTED)"
+        elif email_type == "personal":
+            header = "PERSONAL EMAIL"
+            body_label = "Body"
+        else:
+            header = "EMAIL"
+            body_label = "Body"
+
+        mail_dict = {
+            "ID": self._m_id,
+            "From": self._frm,
+            "To": self._to,
+            "Date": self._date,
+            "Subject": self._subject,
+            "Tag": self._tag,
+            "Flag": self._flag,
+            "Read": self._read,
+            body_label: self._body
+        }
+
+        pretty = pformat(mail_dict, indent=4, sort_dicts=False)
+
+        print(f"----- {header} START -----")
+        print(pretty)
+        print(f"----- {header} END -----")
+        # print(self)
+

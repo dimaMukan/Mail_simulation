@@ -11,18 +11,36 @@
 
 from Mail import *
 
-# FA.5.a
-class Confidential():
+class Confidential(Mail):
     """ """
-    # DO NOT CHANGE CLASS NAME OR METHOD NAMES/SIGNATURES
-    # Add new method(s) as required in CW spec
 
     def __init__(self, m_id,frm,to,date,subject,tag,body):    # DO NOT MODIFY Attributes
         super().__init__(m_id,frm,to,date,subject,tag,body)   # Inherits attributes from parent class DO NOT MODIFY
-        pass
+        self._body = self.encrypt(body)
 
-    # FA.5.b
-    #
-    def encrypt(self):
+    def encrypt(self, body: str) -> str:
         """ """
-        pass
+        res = []
+        num_words = len(body.split())
+
+        for i in body:
+            if i.isalpha():
+                pos = ord(i.lower()) - 96
+                res.append(str(pos * num_words))
+                continue
+
+            if i.isdigit():
+                num = int(i)
+                if 1 <= num <= 26:
+                    res.append(chr(num + 96))
+                else:
+                    res.append(i)
+                continue
+
+            if i == '.':
+                res.append('.')
+            res.append(i)
+
+        return ''.join(res)
+
+
