@@ -5,8 +5,8 @@
 ### Partner A:                                                                                ###
 ###                              Dmytro Mukan, 1475561                                        ###
 ### Partner B:                                                                                ###
-###            <Full name as appears on Moodle>, SID<student ID>                              ###
-#################################################################################################
+###                              Anna Polishchuk, 001450312                                   ###
+##################################################################################################
 
 # DO NOT CHANGE CLASS OR METHOD NAMES
 # replace "pass" with your own code as specified in the CW spec.
@@ -53,8 +53,9 @@ class MailboxAgent:
                     "encrypted_body": email_obj.body
                 })
 
-            if tag == 'PERSONAL':
-                ...
+            elif tag == 'PERSONAL':
+                personal_obj = Personal(m_id, frm, to, date, subject, tag, body)
+                mailbox.append(personal_obj)
             else:
                 mailbox.append(
                     Mail(msg[0].split(":")[1], msg[1].split(":")[1], msg[2].split(":")[1], msg[3].split(":")[1],
@@ -149,29 +150,48 @@ class MailboxAgent:
         ...
 
 # FEATURES B (Partner B)
-    # FB.1
-    # 
+    # FB.1 – show all emails in the mailbox
     def show_emails(self):
-        """  """
-        pass
+        """Show every email in the mailbox"""
+        for mail in self._mailbox:
+            mail.show_email()
 
     # FB.2
     # 
     def mv_email(self, m_id, tag):
-        """  """
-        pass
+        """Move email with this index to a new tag"""
+        try:
+            idx = int(m_id)
+            if 0 <= idx < len(self._mailbox):
+                self._mailbox[idx].tag = tag
+        except ValueError:
+            print("Error: ID must be a number")
 
     # FB.3
     # 
     def mark(self, m_id, m_type):
-        """  """
-        pass
+        """Mark email as 'read' or 'flagged'"""
+        try:
+            idx = int(m_id)
+            if 0 <= idx < len(self._mailbox):
+                mail = self._mailbox[idx]
+                if m_type == "read":
+                    mail.read = True
+                elif m_type == "flagged":
+                    mail.flag = True
+        except ValueError:
+            print("Error: ID must be a number")
 
-    # FB.4
-    # 
+    # FB.4 – find all emails with a given date
     def find(self, date):
-        """  """
-        pass
+        """Return a list of emails received on this date"""
+        result = []
+
+        for mail in self._mailbox:
+            if mail.date == date:
+                result.append(mail)
+
+        return result
 
     # FB.5
     # 
@@ -184,6 +204,24 @@ class MailboxAgent:
 
     def add_email(self, *args):
         """  """
+        #----------------------------------------------------------------------------------
+        max_id = -1
+        for mail in self._mailbox:
+            try:
+                current = int(mail.m_id)
+                if current > max_id:
+                    max_id = current
+            except ValueError:
+                continue
+        new_id = str(max_id + 1)
+        #----------------------------------------------------------------------------------
+
+
+
+
+
+
+
         frm, to, date, subject, tag = args[:5]
         body = ''.join(args[5:]).replace('%','')
         id = str(uuid.uuid4())
@@ -202,11 +240,18 @@ class MailboxAgent:
                         test_mailbox.write(f"\n{(str(i))}\n")
                 print('Saved into txt as a <Confidential email>')
             # FB.6
-            case 'PERSONAL':
-                pass
+        #------------------------------------------------------------------------------------------------------------
+
+            # FB.6 – Partner B: create Personal email when tag is 'prsnl'
+            case 'prsnl':    # executed when tag is 'prsnl'
+                new_mail = Personal(new_id, frm, to, date, subject, "PERSONAL", body)
+                self._mailbox.append(new_mail)
+        # ------------------------------------------------------------------------------------------------------------
+
             # FA&B.6
             case _:
                 email_obj = Mail(id,frm, to, date, subject, tag, body)
+                self._mailbox.append(email_obj)
                 print('Saved into txt ')
 
         with open('test_mailbox.txt', 'a') as test_mailbox:
