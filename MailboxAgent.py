@@ -127,9 +127,8 @@ class MailboxAgent:
         with open("sorted_mailbox_confidential_only.txt", "w") as f:
             for email in sorted_emails:
                 if email.tag == 'CONFIDENTIAL':
-                    f.write("=== CONFIDENTIAL EMAIL ===")
                     f.write(str(email))
-                    f.write("\n\n")
+                    # f.write("\n\n")
         print('Sorted and saved to <sorted_mailbox_confidential_only>')
 
     def show_emails(self):

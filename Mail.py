@@ -58,7 +58,7 @@ class Mail:
         lines = [f"----- {header} START -----"]
         for key, value in mail_dict.items():
             lines.append(f"{key}: {value}")
-        lines.append(f"----- {header} END -----\n")
+        lines.append(f"----- {header} END -----\n\n")
 
         return "\n".join(lines)
 
