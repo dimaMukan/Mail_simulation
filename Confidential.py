@@ -44,16 +44,13 @@ class Confidential(Mail):
 
         return ''.join(res)
 
-    # def display_conf(self):
-    #     def display_conf(mail):
-    #         print('S mur fiology encrypted')
-    #
-    #         d, m, y = mail.date.split("/")
-    #         return int(y), int(m), int(d)
-    #
-    #     sorted_box = sorted(mailbox, key=date_key, reverse=True)
-    #
-    #     for mail in sorted_box:
-    #         mail.show_email()
+    def display_conf(self, mailbox):
+        """Show confidential emails sorted by sender in ascending order."""
+        print("S mur fiology encrypted")
 
+        sorted_box = sorted(mailbox, key=lambda mail: mail.frm.lower())
+
+        for mail in sorted_box:
+            if isinstance(mail, Confidential):
+                mail.show_email()
 

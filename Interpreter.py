@@ -79,8 +79,9 @@ def loop():
 
             case 'get':
                 """Retrieve email by ID and display it."""
-                res = _get_by_id(args)
-                res.show_email()
+                res = mba.get_email(args)
+                if res is not None:
+                    res.show_email()
 
             case 'del':
                 """Move email to 'bin' by updating its tag."""
@@ -100,6 +101,17 @@ def loop():
                 """Sort all emails by sender and save outputs."""
                 mba.sort_from()
                 mba.sort_conf_from()
+
+            case 'cf':
+                """Display confidential emails sorted by sender."""
+                confidential_found = False
+                for mail in mba._mailbox:
+                    if isinstance(mail, Confidential):
+                        mail.display_conf(mba._mailbox)
+                        confidential_found = True
+                        break
+                if not confidential_found:
+                    print("No confidential emails found")
 
             case 'fnd':
                 """Find and display all emails by a given date."""

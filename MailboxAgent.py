@@ -78,9 +78,9 @@ class MailboxAgent:
         """Returns the Mail object with the given ID."""
         try:
             if m_id:
-                m_id = int(m_id[0])
-                if not isinstance(m_id, int):
+                if not str(m_id[0]).isdigit():
                     raise ValueError('ID must be an integer')
+                m_id = int(m_id[0])
                 if 0 <= m_id <= len(self._mailbox) - 1:
                     return self._mailbox[m_id]
                 else:

@@ -28,19 +28,39 @@ class Mail:
 
     def __str__(self):
         """Returns a pretty-printed string representation of the email."""
+        email_type = self._tag.lower()
+
+        if email_type == "confidential":
+            header = "CONFIDENTIAL EMAIL"
+            body_label = "Body (ENCRYPTED)"
+        elif email_type == "personal":
+            header = "PERSONAL EMAIL"
+            body_label = "Body"
+        else:
+            header = "EMAIL"
+            body_label = "Body"
+
+        # Create the dictionary
         mail_dict = {
-            'ID': self._m_id,
-            'From': self._frm,
-            'To': self._to,
-            'Date': self._date,
-            'Subject': self._subject,
-            'Tag': self._tag,
-            'Flag': self._flag,
-            'Read': self._read,
-            'Body': self._body
+            "ID": self._m_id,
+            "From": self._frm,
+            "To": self._to,
+            "Date": self._date,
+            "Subject": self._subject,
+            "Tag": self._tag,
+            "Flag": self._flag,
+            "Read": self._read,
+            body_label: self._body
         }
-        pretty_dict = pformat(mail_dict, indent=4,  sort_dicts=False)
-        return f"\n----- EMAIL START -----\n{pretty_dict}\n------ EMAIL END ------\n"
+
+        # ----- CLEAN PRINT -----
+        # Build the string
+        lines = [f"----- {header} START -----"]
+        for key, value in mail_dict.items():
+            lines.append(f"{key}: {value}")
+        lines.append(f"----- {header} END -----\n")
+
+        return "\n".join(lines)
 
     @property
     def m_id(self):
@@ -104,33 +124,4 @@ class Mail:
 
     def show_email(self):
         """Prints the email in a formatted view based on type."""
-        email_type = self._tag.lower()
-
-        if email_type == "confidential":
-            header = "CONFIDENTIAL EMAIL"
-            body_label = "Body (ENCRYPTED)"
-        elif email_type == "personal":
-            header = "PERSONAL EMAIL"
-            body_label = "Body"
-        else:
-            header = "EMAIL"
-            body_label = "Body"
-
-        # Create the dictionary
-        mail_dict = {
-            "ID": self._m_id,
-            "From": self._frm,
-            "To": self._to,
-            "Date": self._date,
-            "Subject": self._subject,
-            "Tag": self._tag,
-            "Flag": self._flag,
-            "Read": self._read,
-            body_label: self._body
-        }
-
-        # ----- CLEAN PRINT (no {}, no quotes, no pformat) -----
-        print(f"----- {header} START -----")
-        for key, value in mail_dict.items():
-            print(f"{key}: {value}")
-        print(f"----- {header} END -----")
+        print(str(self))

@@ -1,655 +1,534 @@
-{'id': '0', 'body': 'Body63. Csz ucz skvdst wcqj lmcj.', 'encrypted_body': '129024150fc.. 18114156 12618156 1146613224114120 1381810260 72781860..'}
-{'id': '8', 'body': 'Body136. Vlu tetu hogkpbyyct sgkbz ntxiqdf anv jzgalmlinp uza.', 'encrypted_body': '1813536225acf.. 198108189 18045180189 7213563991441822522527180 171639918234 126180216811533654 9126198 9023463910811710881126144 1892349..'}
-{'id': '9', 'body': 'Body101. Qtwefasbsw gqnxdxt vcjuqxs.', 'encrypted_body': '86016100a0a.. 688092202447687692 28685696169680 88124084689676..'}
-{'id': '16', 'body': 'Body23. Dqndzce cmrm web pomcpd fae avlajnp lghnvg.', 'encrypted_body': '1612032200bc.. 32136112322082440 24104144104 1844016 1281201042412832 48840 817696880112128 96566411217656..'}
-{'id': '17', 'body': 'Body27. Thut goze scpchtckah efnm fis bcyezznd yzznycuxho qwo wjpnuxvwbk.', 'encrypted_body': '2015040250bg.. 20080210200 7015026050 190301603080200301101080 5060140130 6090190 20302505026026014040 2502602601402503021024080150 170230150 23010016014021024022023020110..'}
-{'id': '29', 'body': 'Body55. Htvfwud.', 'encrypted_body': '430850ee.. 1640441246428..'}
-{'id': '37', 'body': 'Body71. Ybcqflvmaf cyeqzr fxcg hxdq.', 'encrypted_body': '107520125ga.. 125101585306011065530 15125258513090 301201535 401202085..'}
-
+{'id': '2', 'body': 'Body57. Xxyh.', 'encrypted_body': '430850eg.. 48485016..'}
+{'id': '3', 'body': 'Body102. Uwrebcqmv crffjcke.', 'encrypted_body': '6451275a0b.. 6369541569513966 95418183093315..'}
+{'id': '4', 'body': 'Body35. Ltiikomfh wvex btwozxnm.', 'encrypted_body': '86016100ce.. 488036364460522432 92882096 8809260104965652..'}
+{'id': '10', 'body': 'Body37. Gbrqzzza ahyfste rxettkb tqyfzrzilu mer wwpj.', 'encrypted_body': '1410528175cg.. 49141261191821821827 7561754213314035 126168351401407714 140119175421821261826384147 9135126 16116111270..'}
+{'id': '11', 'body': 'Body113. Sqntvzwhc mdtyaqhbx huyn cnbmiysfy dbiz embimwzc qqlcz.', 'encrypted_body': '1612032200aac.. 1521361121601762081846424 1043216020081366416192 64168200112 24112161047220015248200 321672208 40104167210418420824 1361369624208..'}
+{'id': '20', 'body': 'Body66. Rcibbvoly.', 'encrypted_body': '430850ff.. 366184444302450..'}
+{'id': '21', 'body': 'Body62. Alcta hbeqirvm bktd frcte ymkh tltqrspk gytqqq rgtooj sneuwv.', 'encrypted_body': '2015040250fb.. 101203020010 80205017090180220130 2011020040 601803020050 25013011080 200120200170180190160110 70250200170170170 18070200150150100 19014050210230220..'}
+{'id': '23', 'body': 'Body40. Mvopnbv zdmngpxq myxpy.', 'encrypted_body': '86016100d0.. 5288606456888 10416525628649668 521009664100..'}
+{'id': '30', 'body': 'Body91. Upnt mzsftqyoq csceeim cgro dfogefcddr qmar nrwj.', 'encrypted_body': '1612032200ia.. 168128112160 10420815248160136200120136 2415224404072104 2456144120 3248120564048243232144 1361048144 11214418480..'}
+{'id': '31', 'body': 'Body86. Htdgno ogyaymx fwubnncsp uhldylr eajcchv wpml lwlmdjcmu.', 'encrypted_body': '1612032200hf.. 641603256112120 120562008200104192 481841681611211224152128 16864963220096144 40880242464176 18412810496 9618496104328024104168..'}
+{'id': '33', 'body': 'Body86. Ruuvxxd.', 'encrypted_body': '430850hf.. 3642424448488..'}
+{'id': '35', 'body': 'Body102. Hcprdfny fxqfjxn snufp ntsijlecd chttlroku tkqrm yquciir.', 'encrypted_body': '1612032200a0b.. 64241281443248112200 481921364880192112 15211216848128 112160152728096402432 24641601609614412088168 16088136144104 200136168247272144..'}
+{'id': '36', 'body': 'Body59. Prsaczs dpam adrfq sopjg dcegzvmxe ohwmou.', 'encrypted_body': '1410528175ei.. 112126133721182133 28112791 72812642119 1331051127049 282135491821549116835 1055616191105147..'}
+{'id': '38', 'body': 'Body63. Iejewf czatoos rjfa ldbvluw xdwyhdqz.', 'encrypted_body': '129024150fc.. 5430603013836 1815661209090114 10860366 72241213272126138 144241381504824102156..'}
 ----- EMAIL START -----
-{   'ID': '40',
-    'From': 'email142@gre.ac.uk',
-    'To': 'email788@gre.ac.uk',
-    'Date': '29/5/2025',
-    'Subject': 'subject88',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email14211332.Isfffffeosxzmp. Stats: Word count:1, Average word '
-            'length:29, Longest word length:29.'}
------- EMAIL END ------
-
------ EMAIL START -----
-{   'ID': '0',
-    'From': 'email1@gre.ac.uk',
-    'To': 'email7@gre.ac.uk',
-    'Date': '15/10/2025',
-    'Subject': 'subject93',
-    'Tag': 'CONFIDENTIAL',
-    'Flag': False,
-    'Read': False,
-    'Body': '129024150fc.. 18114156 12618156 1146613224114120 1381810260 '
-            '72781860..'}
------- EMAIL END ------
-
+ID: 0
+From: email7@gre.ac.uk
+To: email56@gre.ac.uk
+Date: 29/10/2025
+Subject: subject12
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body62. Bbdbwln bctuiih apesnona tveuc rvdas gzndzyptt.
+----- EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '1',
-    'From': 'email11@gre.ac.uk',
-    'To': 'email23@gre.ac.uk',
-    'Date': '15/5/2025',
-    'Subject': 'subject89',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email1132. Ovyhdvmjja. Stats: Word count:2, Average word '
-            'length:10, Longest word length:11.'}
------- EMAIL END ------
+ID: 1
+From: email3@gre.ac.uk
+To: email25@gre.ac.uk
+Date: 10/4/2025
+Subject: subject60
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body55. Xbc kmmkkk.
+----- EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '2',
-    'From': 'email4@gre.ac.uk',
-    'To': 'email80@gre.ac.uk',
-    'Date': '7/5/2025',
-    'Subject': 'subject81',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email476. Mind sio snclfch. Stats: Word count:4, Average word '
-            'length:6, Longest word length:9.'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 2
+From: email5@gre.ac.uk
+To: email9@gre.ac.uk
+Date: 16/6/2025
+Subject: subject42
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 430850eg.. 48485016..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '3',
-    'From': 'email6@gre.ac.uk',
-    'To': 'email59@gre.ac.uk',
-    'Date': '15/1/2025',
-    'Subject': 'subject19',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email6121. Norwmklj iek ztwa dugccpjnai. Stats: Word count:5, '
-            'Average word length:7, Longest word length:11.'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 3
+From: email7@gre.ac.uk
+To: email22@gre.ac.uk
+Date: 27/12/2025
+Subject: subject84
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 6451275a0b.. 6369541569513966 95418183093315..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '4',
-    'From': 'email10@gre.ac.uk',
-    'To': 'email25@gre.ac.uk',
-    'Date': '16/5/2025',
-    'Subject': 'subject54',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email1085. Uyrhic quketujnxr nsc lwnw slnkzj. Stats: Word '
-            'count:6, Average word length:6, Longest word length:10.'}
------- EMAIL END ------
-
+----- CONFIDENTIAL EMAIL START -----
+ID: 4
+From: email8@gre.ac.uk
+To: email69@gre.ac.uk
+Date: 15/7/2025
+Subject: subject4
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 86016100ce.. 488036364460522432 92882096 8809260104965652..
+----- CONFIDENTIAL EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '5',
-    'From': 'email12@gre.ac.uk',
-    'To': 'email64@gre.ac.uk',
-    'Date': '7/2/2025',
-    'Subject': 'subject55',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body94. Okmiqsp eifexkq.'}
------- EMAIL END ------
-
-
-
------ EMAIL START -----
-{   'ID': '6',
-    'From': 'email7@gre.ac.uk',
-    'To': 'email68@gre.ac.uk',
-    'Date': '7/3/2025',
-    'Subject': 'subject50',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email7125. Nwjwpdx qra dgkhclca. Stats: Word count:4, Average '
-            'word length:7, Longest word length:10.'}
------- EMAIL END ------
-
+ID: 5
+From: email7@gre.ac.uk
+To: email19@gre.ac.uk
+Date: 5/12/2025
+Subject: subject31
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body25. Katd fqsjtusq.
+----- EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '7',
-    'From': 'email15@gre.ac.uk',
-    'To': 'email42@gre.ac.uk',
-    'Date': '15/12/2025',
-    'Subject': 'subject3',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email1530. Fjaftur zzg rdbp tfqqbkxc dllz vfgbiatqy ueu rvsarhn '
-            'dkq. Stats: Word count:10, Average word length:5, Longest word '
-            'length:10.'}
------- EMAIL END ------
-
+ID: 6
+From: email14@gre.ac.uk
+To: email72@gre.ac.uk
+Date: 7/10/2025
+Subject: subject11
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body17. Ajfbihea eobnhf hncdxti.
+----- EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '8',
-    'From': 'email1@gre.ac.uk',
-    'To': 'email70@gre.ac.uk',
-    'Date': '28/5/2025',
-    'Subject': 'subject25',
-    'Tag': 'CONFIDENTIAL',
-    'Flag': False,
-    'Read': False,
-    'Body': '1813536225acf.. 198108189 18045180189 7213563991441822522527180 '
-            '171639918234 126180216811533654 9126198 9023463910811710881126144 '
-            '1892349..'}
------- EMAIL END ------
-
+ID: 7
+From: email7@gre.ac.uk
+To: email40@gre.ac.uk
+Date: 2/1/2025
+Subject: subject81
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body124. Ztkojvlcoc hykghqxlpg lbcu twraumbbg qclpf.
+----- EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '9',
-    'From': 'email11@gre.ac.uk',
-    'To': 'email30@gre.ac.uk',
-    'Date': '10/1/2025',
-    'Subject': 'subject24',
-    'Tag': 'CONFIDENTIAL',
-    'Flag': False,
-    'Read': False,
-    'Body': '86016100a0a.. 688092202447687692 28685696169680 88124084689676..'}
------- EMAIL END ------
-
-
-
------ EMAIL START -----
-{   'ID': '10',
-    'From': 'email8@gre.ac.uk',
-    'To': 'email21@gre.ac.uk',
-    'Date': '15/1/2025',
-    'Subject': 'subject74',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body122. Ioe qtgkbcztr.'}
------- EMAIL END ------
-
+ID: 8
+From: email6@gre.ac.uk
+To: email70@gre.ac.uk
+Date: 5/0/2025
+Subject: subject48
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body12. Jcurlrssc bnqh yjcccr wqhpx suoycys.
+----- EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '11',
-    'From': 'email2@gre.ac.uk',
-    'To': 'email31@gre.ac.uk',
-    'Date': '12/8/2025',
-    'Subject': 'subject19',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body7. Tobg erusrxw wfywadu nabsmthte peezfeobi ncgjm ckynkvyw '
-            'atypzkrjix.'}
------- EMAIL END ------
+ID: 9
+From: email5@gre.ac.uk
+To: email62@gre.ac.uk
+Date: 20/7/2025
+Subject: subject25
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body66. Jqkgfwvnn.
+----- EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '12',
-    'From': 'email10@gre.ac.uk',
-    'To': 'email47@gre.ac.uk',
-    'Date': '6/0/2025',
-    'Subject': 'subject15',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email10136. Qvbpnw mswc mcp drukis rmhcpti pnsdnvzwe. Stats: Word '
-            'count:7, Average word length:6, Longest word length:11.'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 10
+From: email13@gre.ac.uk
+To: email48@gre.ac.uk
+Date: 13/9/2025
+Subject: subject18
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 1410528175cg.. 49141261191821821827 7561754213314035 126168351401407714 140119175421821261826384147 9135126 16116111270..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '13',
-    'From': 'email0@gre.ac.uk',
-    'To': 'email45@gre.ac.uk',
-    'Date': '6/8/2025',
-    'Subject': 'subject11',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body137. Pskkbb wqloncqw sncbfow.'}
------- EMAIL END ------
-
+----- CONFIDENTIAL EMAIL START -----
+ID: 11
+From: email3@gre.ac.uk
+To: email41@gre.ac.uk
+Date: 20/4/2025
+Subject: subject13
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 1612032200aac.. 1521361121601762081846424 1043216020081366416192 64168200112 24112161047220015248200 321672208 40104167210418420824 1361369624208..
+----- CONFIDENTIAL EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '14',
-    'From': 'email2@gre.ac.uk',
-    'To': 'email80@gre.ac.uk',
-    'Date': '5/12/2025',
-    'Subject': 'subject25',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body35. Qlp.'}
------- EMAIL END ------
+ID: 12
+From: email9@gre.ac.uk
+To: email6@gre.ac.uk
+Date: 8/4/2025
+Subject: subject18
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body47. Psy uouajnrhtv slfxwksywr.
+----- EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '15',
-    'From': 'email12@gre.ac.uk',
-    'To': 'email39@gre.ac.uk',
-    'Date': '15/4/2025',
-    'Subject': 'subject92',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email1248. Tdrhkmcv wbym iqsrxshme imqnmbyusr zmhgg sxhovlcai '
-            'fgskynak mthievm xuvepzc. Stats: Word count:10, Average word '
-            'length:7, Longest word length:10.'}
------- EMAIL END ------
-
+----- PERSONAL EMAIL START -----
+ID: 13
+From: email0@gre.ac.uk
+To: email21@gre.ac.uk
+Date: 16/3/2025
+Subject: subject69
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email060. Icnaonps vks. Stats: Word count:3, Average word length:7, Longest word length:9.
+----- PERSONAL EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '16',
-    'From': 'email4@gre.ac.uk',
-    'To': 'email66@gre.ac.uk',
-    'Date': '3/12/2025',
-    'Subject': 'subject2',
-    'Tag': 'CONFIDENTIAL',
-    'Flag': False,
-    'Read': False,
-    'Body': '1612032200bc.. 32136112322082440 24104144104 1844016 '
-            '1281201042412832 48840 817696880112128 96566411217656..'}
------- EMAIL END ------
+ID: 14
+From: email6@gre.ac.uk
+To: email3@gre.ac.uk
+Date: 12/7/2025
+Subject: subject91
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body88. Nyhhqhuw awdzttwm.
+----- EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '17',
-    'From': 'email5@gre.ac.uk',
-    'To': 'email52@gre.ac.uk',
-    'Date': '4/7/2025',
-    'Subject': 'subject45',
-    'Tag': 'CONFIDENTIAL',
-    'Flag': False,
-    'Read': False,
-    'Body': '2015040250bg.. 20080210200 7015026050 190301603080200301101080 '
-            '5060140130 6090190 20302505026026014040 '
-            '2502602601402503021024080150 170230150 '
-            '23010016014021024022023020110..'}
------- EMAIL END ------
-
+----- PERSONAL EMAIL START -----
+ID: 15
+From: email5@gre.ac.uk
+To: email35@gre.ac.uk
+Date: 29/9/2025
+Subject: subject39
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email593. Rzdeui pqbwqsa ncuhwgd. Stats: Word count:4, Average word length:7, Longest word length:9.
+----- PERSONAL EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '18',
-    'From': 'email7@gre.ac.uk',
-    'To': 'email49@gre.ac.uk',
-    'Date': '11/4/2025',
-    'Subject': 'subject70',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email721. Rimv xfaowtfjxu rjcwry wcdbn piczqtcgm csfhyxhf '
-            'jcaxwxs. Stats: Word count:8, Average word length:7, Longest word '
-            'length:10.'}
------- EMAIL END ------
+ID: 16
+From: email13@gre.ac.uk
+To: email63@gre.ac.uk
+Date: 9/5/2025
+Subject: subject77
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body17. Ekukrvhxvp jenaf fik jloruoyyq.
+----- EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '19',
-    'From': 'email2@gre.ac.uk',
-    'To': 'email48@gre.ac.uk',
-    'Date': '26/8/2025',
-    'Subject': 'subject31',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email293. Tectkemti patyohsw zfaheefa. Stats: Word count:4, '
-            'Average word length:8, Longest word length:9.'}
------- EMAIL END ------
+----- PERSONAL EMAIL START -----
+ID: 17
+From: email13@gre.ac.uk
+To: email57@gre.ac.uk
+Date: 13/4/2025
+Subject: subject81
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email1328. Pusafsur xncafjqa vcdkk. Stats: Word count:4, Average word length:8, Longest word length:10.
+----- PERSONAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '20',
-    'From': 'email10@gre.ac.uk',
-    'To': 'email44@gre.ac.uk',
-    'Date': '10/1/2025',
-    'Subject': 'subject31',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email102. Sormu tdvlcccw xgdcefqw qadybf rphwlsqf. Stats: Word '
-            'count:6, Average word length:7, Longest word length:9.'}
------- EMAIL END ------
+----- PERSONAL EMAIL START -----
+ID: 18
+From: email0@gre.ac.uk
+To: email64@gre.ac.uk
+Date: 7/10/2025
+Subject: subject32
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email0124. Evfvgyif jvyqgu suyqqqmm vptia dnchbhopzd yixthxu tmxtlze lnbps zfahfgcpl pcgsdv. Stats: Word count:11, Average word length:7, Longest word length:10.
+----- PERSONAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '21',
-    'From': 'email5@gre.ac.uk',
-    'To': 'email34@gre.ac.uk',
-    'Date': '6/10/2025',
-    'Subject': 'subject74',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body101. Cei gscywimlt bzucdsjkx eaxdm.'}
------- EMAIL END ------
-
+----- PERSONAL EMAIL START -----
+ID: 19
+From: email7@gre.ac.uk
+To: email15@gre.ac.uk
+Date: 8/11/2025
+Subject: subject76
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email70. Zqdjnje. Stats: Word count:2, Average word length:8, Longest word length:8.
+----- PERSONAL EMAIL END -----
 
 
------ EMAIL START -----
-{   'ID': '22',
-    'From': 'email0@gre.ac.uk',
-    'To': 'email13@gre.ac.uk',
-    'Date': '12/1/2025',
-    'Subject': 'subject75',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body65. Clnhz gtc mvkmmbws psgtkzudvu obitq juzn nfrb pxfgrt.'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 20
+From: email9@gre.ac.uk
+To: email80@gre.ac.uk
+Date: 19/10/2025
+Subject: subject48
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 430850ff.. 366184444302450..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '23',
-    'From': 'email4@gre.ac.uk',
-    'To': 'email40@gre.ac.uk',
-    'Date': '17/8/2025',
-    'Subject': 'subject90',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email455. Vickqr nyvderf xqt croaklgu tdaerb moelz ohoaf muz '
-            'hgqvzyo. Stats: Word count:10, Average word length:6, Longest '
-            'word length:9.'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 21
+From: email1@gre.ac.uk
+To: email4@gre.ac.uk
+Date: 2/5/2025
+Subject: subject7
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 2015040250fb.. 101203020010 80205017090180220130 2011020040 601803020050 25013011080 200120200170180190160110 70250200170170170 18070200150150100 19014050210230220..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '24',
-    'From': 'email0@gre.ac.uk',
-    'To': 'email72@gre.ac.uk',
-    'Date': '28/3/2025',
-    'Subject': 'subject55',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email044. Cvlaazgdan cggaovxdl aqrqwh yjyhrq. Stats: Word '
-            'count:5, Average word length:8, Longest word length:10.'}
------- EMAIL END ------
+----- PERSONAL EMAIL START -----
+ID: 22
+From: email3@gre.ac.uk
+To: email77@gre.ac.uk
+Date: 16/0/2025
+Subject: subject55
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email379. Xsm zvjt hgzitwkh macxyr pzlt. Stats: Word count:6, Average word length:5, Longest word length:9.
+----- PERSONAL EMAIL END -----
 
 
+----- CONFIDENTIAL EMAIL START -----
+ID: 23
+From: email4@gre.ac.uk
+To: email39@gre.ac.uk
+Date: 14/7/2025
+Subject: subject28
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 86016100d0.. 5288606456888 10416525628649668 521009664100..
+----- CONFIDENTIAL EMAIL END -----
 
------ EMAIL START -----
-{   'ID': '25',
-    'From': 'email7@gre.ac.uk',
-    'To': 'email15@gre.ac.uk',
-    'Date': '25/5/2025',
-    'Subject': 'subject95',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email742. Onroppc ycuclrcenj yzi vkhkmm zapcecrp tpuumlhf '
-            'fvkolinf. Stats: Word count:8, Average word length:7, Longest '
-            'word length:10.'}
------- EMAIL END ------
 
+----- PERSONAL EMAIL START -----
+ID: 24
+From: email6@gre.ac.uk
+To: email56@gre.ac.uk
+Date: 17/9/2025
+Subject: subject17
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email632. Lebizvgkrx wwqrlmga iikhvo gfwtay zsk brtn mwnstci tkvhdztxv ccv. Stats: Word count:10, Average word length:6, Longest word length:10.
+----- PERSONAL EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '26',
-    'From': 'email6@gre.ac.uk',
-    'To': 'email23@gre.ac.uk',
-    'Date': '1/9/2025',
-    'Subject': 'subject92',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body131. Hkngozg apnydkslv pcbaecfdr.'}
------- EMAIL END ------
+ID: 25
+From: email11@gre.ac.uk
+To: email72@gre.ac.uk
+Date: 8/2/2025
+Subject: subject10
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body71. Nkgq btgdbstyaq oscrokrx oolijp bpgebgtks hlmvwhdsb hmbxwmfnc fysq.
+----- EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '27',
-    'From': 'email0@gre.ac.uk',
-    'To': 'email39@gre.ac.uk',
-    'Date': '18/0/2025',
-    'Subject': 'subject36',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body118. Phsi cnmdxq tnpj ejbvk npok.'}
------- EMAIL END ------
-
+----- PERSONAL EMAIL START -----
+ID: 26
+From: email3@gre.ac.uk
+To: email26@gre.ac.uk
+Date: 11/0/2025
+Subject: subject71
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email365. Czev emwdgpsrn pimclrj kbjednysxi fdfwh lxeu ginpb oybqwykifc. Stats: Word count:9, Average word length:7, Longest word length:11.
+----- PERSONAL EMAIL END -----
 
 
------ EMAIL START -----
-{   'ID': '28',
-    'From': 'email13@gre.ac.uk',
-    'To': 'email31@gre.ac.uk',
-    'Date': '17/4/2025',
-    'Subject': 'subject95',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email1394. Pflhgq uxw gmoabvzcpg ufvll mvbnh jdjfe zrcr. Stats: '
-            'Word count:8, Average word length:6, Longest word length:10.'}
------- EMAIL END ------
-
+----- PERSONAL EMAIL START -----
+ID: 27
+From: email8@gre.ac.uk
+To: email31@gre.ac.uk
+Date: 29/5/2025
+Subject: subject70
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email8127. Jwtn qbgp efjicnj fqcwgi innv hpeebn qdxb qnsnxq qokb vrhofts. Stats: Word count:11, Average word length:5, Longest word length:10.
+----- PERSONAL EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '29',
-    'From': 'email9@gre.ac.uk',
-    'To': 'email17@gre.ac.uk',
-    'Date': '28/2/2025',
-    'Subject': 'subject66',
-    'Tag': 'CONFIDENTIAL',
-    'Flag': False,
-    'Read': False,
-    'Body': '430850ee.. 1640441246428..'}
------- EMAIL END ------
+ID: 28
+From: email9@gre.ac.uk
+To: email58@gre.ac.uk
+Date: 9/8/2025
+Subject: subject3
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body129. Hcxvejwa nplou.
+----- EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '30',
-    'From': 'email7@gre.ac.uk',
-    'To': 'email39@gre.ac.uk',
-    'Date': '19/12/2025',
-    'Subject': 'subject58',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body74. Rpvizxnjmm diyqmecd zoutkvd.'}
------- EMAIL END ------
-
+----- PERSONAL EMAIL START -----
+ID: 29
+From: email15@gre.ac.uk
+To: email33@gre.ac.uk
+Date: 25/10/2025
+Subject: subject42
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email1581. Xkdkhpvbas xegvjn. Stats: Word count:3, Average word length:9, Longest word length:10.
+----- PERSONAL EMAIL END -----
 
 
------ EMAIL START -----
-{   'ID': '31',
-    'From': 'email12@gre.ac.uk',
-    'To': 'email35@gre.ac.uk',
-    'Date': '14/12/2025',
-    'Subject': 'subject87',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body91. Rlrmiuew iaucremkao.'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 30
+From: email3@gre.ac.uk
+To: email19@gre.ac.uk
+Date: 9/0/2025
+Subject: subject36
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 1612032200ia.. 168128112160 10420815248160136200120136 2415224404072104 2456144120 3248120564048243232144 1361048144 11214418480..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '32',
-    'From': 'email14@gre.ac.uk',
-    'To': 'email5@gre.ac.uk',
-    'Date': '29/11/2025',
-    'Subject': 'subject25',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email1455. Cpvdknx hgkrc zmemvds. Stats: Word count:4, Average '
-            'word length:7, Longest word length:10.'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 31
+From: email8@gre.ac.uk
+To: email68@gre.ac.uk
+Date: 10/10/2025
+Subject: subject89
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 1612032200hf.. 641603256112120 120562008200104192 481841681611211224152128 16864963220096144 40880242464176 18412810496 9618496104328024104168..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '33',
-    'From': 'email7@gre.ac.uk',
-    'To': 'email1@gre.ac.uk',
-    'Date': '3/5/2025',
-    'Subject': 'subject89',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email790. Med jmjwsveh wklzkxcaa bfm aonotbijni jantamwik. Stats: '
-            'Word count:7, Average word length:7, Longest word length:10.'}
------- EMAIL END ------
+----- PERSONAL EMAIL START -----
+ID: 32
+From: email7@gre.ac.uk
+To: email52@gre.ac.uk
+Date: 7/4/2025
+Subject: subject7
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email719. Sngltnsd dhf grgtlkp uzo bidbpn oqga avvcscn tugotyu jyl uiv. Stats: Word count:11, Average word length:5, Longest word length:9.
+----- PERSONAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '34',
-    'From': 'email2@gre.ac.uk',
-    'To': 'email56@gre.ac.uk',
-    'Date': '13/7/2025',
-    'Subject': 'subject36',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email235. Qpdeefmpg jrkj nzwj adfchou prpm iiqye stipm. Stats: '
-            'Word count:8, Average word length:6, Longest word length:9.'}
------- EMAIL END ------
-
+----- CONFIDENTIAL EMAIL START -----
+ID: 33
+From: email5@gre.ac.uk
+To: email30@gre.ac.uk
+Date: 12/2/2025
+Subject: subject14
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 430850hf.. 3642424448488..
+----- CONFIDENTIAL EMAIL END -----
 
 
 ----- EMAIL START -----
-{   'ID': '35',
-    'From': 'email9@gre.ac.uk',
-    'To': 'email26@gre.ac.uk',
-    'Date': '19/2/2025',
-    'Subject': 'subject67',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body10. Whtk ycfq wgxih qvpmmsupxg oaqxg.'}
------- EMAIL END ------
+ID: 34
+From: email3@gre.ac.uk
+To: email80@gre.ac.uk
+Date: 29/6/2025
+Subject: subject42
+Tag: PUBLIC
+Flag: False
+Read: False
+Body: Body73. Iflantgzh bfxplghlql cgtviupea umq iddsi qvc ieflrbvp qhxvmyeg aijxplanb dvz.
+----- EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '36',
-    'From': 'email14@gre.ac.uk',
-    'To': 'email32@gre.ac.uk',
-    'Date': '9/1/2025',
-    'Subject': 'subject87',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body35. Lepcaicwml cwz nijoevu awg eumzdk ugtodygpf xpxuej.'}
------- EMAIL END ------
-
+----- CONFIDENTIAL EMAIL START -----
+ID: 35
+From: email9@gre.ac.uk
+To: email60@gre.ac.uk
+Date: 3/6/2025
+Subject: subject79
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 1612032200a0b.. 64241281443248112200 481921364880192112 15211216848128 112160152728096402432 24641601609614412088168 16088136144104 200136168247272144..
+----- CONFIDENTIAL EMAIL END -----
 
 
------ EMAIL START -----
-{   'ID': '37',
-    'From': 'email4@gre.ac.uk',
-    'To': 'email7@gre.ac.uk',
-    'Date': '26/4/2025',
-    'Subject': 'subject16',
-    'Tag': 'CONFIDENTIAL',
-    'Flag': False,
-    'Read': False,
-    'Body': '107520125ga.. 125101585306011065530 15125258513090 301201535 '
-            '401202085..'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 36
+From: email3@gre.ac.uk
+To: email31@gre.ac.uk
+Date: 9/11/2025
+Subject: subject66
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 1410528175ei.. 112126133721182133 28112791 72812642119 1331051127049 282135491821549116835 1055616191105147..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '38',
-    'From': 'email15@gre.ac.uk',
-    'To': 'email77@gre.ac.uk',
-    'Date': '9/10/2025',
-    'Subject': 'subject5',
-    'Tag': 'PUBLIC',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body47. Qtqr rffl hiocn.'}
------- EMAIL END ------
-
+----- PERSONAL EMAIL START -----
+ID: 37
+From: email7@gre.ac.uk
+To: email34@gre.ac.uk
+Date: 10/6/2025
+Subject: subject66
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email733. Gntyqa smbnyzyhde wcycij vrtvuzvjm gozdxu pftjgw mjubygmqlg. Stats: Word count:8, Average word length:7, Longest word length:11.
+----- PERSONAL EMAIL END -----
 
 
------ EMAIL START -----
-{   'ID': '39',
-    'From': 'email14@gre.ac.uk',
-    'To': 'email38@gre.ac.uk',
-    'Date': '28/8/2025',
-    'Subject': 'subject44',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email14132. Tcdfps xmrselfc ovmeyk geegnbw dlnsnbykvz klv xiqqzlq '
-            'aqrmoe qnhsvcpkyl. Stats: Word count:10, Average word length:7, '
-            'Longest word length:11.'}
------- EMAIL END ------
+----- CONFIDENTIAL EMAIL START -----
+ID: 38
+From: email2@gre.ac.uk
+To: email35@gre.ac.uk
+Date: 13/5/2025
+Subject: subject90
+Tag: CONFIDENTIAL
+Flag: False
+Read: False
+Body (ENCRYPTED): 129024150fc.. 5430603013836 1815661209090114 10860366 72241213272126138 144241381504824102156..
+----- CONFIDENTIAL EMAIL END -----
 
 
-
------ EMAIL START -----
-{   'ID': '40',
-    'From': 'email142@gre.ac.uk',
-    'To': 'email788@gre.ac.uk',
-    'Date': '29/5/2025',
-    'Subject': 'subject88',
-    'Tag': 'PERSONAL',
-    'Flag': False,
-    'Read': False,
-    'Body': 'email14211332.Isfffffeosxzmp. Stats: Word count:1, Average word '
-            'length:29, Longest word length:29.'}
------- EMAIL END ------
+----- PERSONAL EMAIL START -----
+ID: 39
+From: email11@gre.ac.uk
+To: email20@gre.ac.uk
+Date: 22/12/2025
+Subject: subject2
+Tag: PERSONAL
+Flag: False
+Read: False
+Body: email11113. Uuaup eamdbd ikyfm tuhdpxl igzj wequnmltq tqqkoncsgm gvh jayaxfrcey phtr. Stats: Word count:11, Average word length:6, Longest word length:11.
+----- PERSONAL EMAIL END -----
 
 
-
-{'id': '41', 'body': 'Body99911.Isfeoafwcosxzmp.', 'encrypted_body': '215425iiiaa..919651516233151924261316..'}
-
------ EMAIL START -----
-{   'ID': '41',
-    'From': 'email1223@gre.ac.uk',
-    'To': 'email723@gre.ac.uk',
-    'Date': '29/5/2025',
-    'Subject': 'subject99',
-    'Tag': 'CONFIDENTIAL',
-    'Flag': False,
-    'Read': False,
-    'Body': '215425iiiaa..919651516233151924261316..'}
------- EMAIL END ------
-
------ EMAIL START -----
-{   'ID': '41',
-    'From': 'email116@gre.ac.uk',
-    'To': 'email142@gre.ac.uk',
-    'Date': '29/5/2025',
-    'Subject': 'subject36',
-    'Tag': 'tag1',
-    'Flag': False,
-    'Read': False,
-    'Body': 'Body:Body68.Wodsvmmtskgdrxzrk.'}
------- EMAIL END ------
