@@ -46,7 +46,7 @@ class MailboxAgent:
 
             if tag == 'CONFIDENTIAL':
                 email_obj = Confidential(m_id, frm, to, date, subject, tag, body)
-
+                mailbox.append(email_obj)
                 _saved_data.append({
                     "id": m_id,
                     "body": body,
@@ -205,21 +205,16 @@ class MailboxAgent:
     def add_email(self, *args):
         """  """
         #----------------------------------------------------------------------------------
-        max_id = -1
-        for mail in self._mailbox:
-            try:
-                current = int(mail.m_id)
-                if current > max_id:
-                    max_id = current
-            except ValueError:
-                continue
-        new_id = str(max_id + 1)
+        # max_id = -1
+        # for mail in self._mailbox:
+        #     try:
+        #         current = int(mail.m_id)
+        #         if current > max_id:
+        #             max_id = current
+        #     except ValueError:
+        #         continue
+        # id = str(max_id + 1)
         #----------------------------------------------------------------------------------
-
-
-
-
-
 
 
         frm, to, date, subject, tag = args[:5]
@@ -239,13 +234,14 @@ class MailboxAgent:
                     for i in _body_temp:
                         test_mailbox.write(f"\n{(str(i))}\n")
                 print('Saved into txt as a <Confidential email>')
+
             # FB.6
         #------------------------------------------------------------------------------------------------------------
 
             # FB.6 – Partner B: create Personal email when tag is 'prsnl'
             case 'prsnl':    # executed when tag is 'prsnl'
-                new_mail = Personal(new_id, frm, to, date, subject, "PERSONAL", body)
-                self._mailbox.append(new_mail)
+                email_obj = Personal(id, frm, to, date, subject, "PERSONAL", body)
+                self._mailbox.append(email_obj)
         # ------------------------------------------------------------------------------------------------------------
 
             # FA&B.6
@@ -254,6 +250,7 @@ class MailboxAgent:
                 self._mailbox.append(email_obj)
                 print('Saved into txt ')
 
+        # self._mailbox.append(email_obj)
         with open('test_mailbox.txt', 'a') as test_mailbox:
             test_mailbox.write(email_obj.__str__())
 
