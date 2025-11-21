@@ -20,17 +20,15 @@ import uuid
 
 
 class MailboxAgent:
-    """<This is the documentation for MailboxAgent. Complete the docstring for this class.""" #---------------------------------------------------------
-    def __init__(self, email_data):                       # DO NOT CHANGE
-        self._mailbox = self.__gen_mailbox(email_data)    # data structure containing Mail objects DO NOT CHANGE
+    """Manages a collection of Mail objects and provides mailbox operations."""
 
-    # Given email_data (string containing each email on a separate line),
-    # __gen_mailbox returns mailbox as a list containing received emails as Mail objects
+    def __init__(self, email_data):
+        """Initializes the mailbox with a list of Mail objects."""
+        self._mailbox = self.__gen_mailbox(email_data)
+
     @classmethod
-    def __gen_mailbox(cls, email_data):                   # DO NOT CHANGE
-        """ generates mailbox data structure
-            :ivar: String
-            :rtype: list  """
+    def __gen_mailbox(cls, email_data):
+        """Generates a list of Mail objects from raw email data."""
         mailbox = []
         _saved_data = []
         for e in email_data:
@@ -66,23 +64,18 @@ class MailboxAgent:
                 test_mailbox.write(str(i) + "\n")
         return mailbox
 
-
-
     def save(self):
+        """Saves all emails in the mailbox to a text file."""
         try:
             with open('test_mailbox.txt', 'a') as test_mailbox:
                 for i in self._mailbox:
                     test_mailbox.write(f"{i.__str__()}\n\n")
             print('Saved into txt')
-
         except Exception as e:
             print(f"Error while saving emails: {e}")
 
-# FEATURES A (Partner A)
-    # FA.1
-    # 
     def get_email(self, m_id):
-        """ """
+        """Returns the Mail object with the given ID."""
         try:
             if m_id:
                 m_id = int(m_id[0])
@@ -97,17 +90,12 @@ class MailboxAgent:
         except ValueError as er:
             print(f'Error: {er}')
 
-
-    # FA.3
-    # 
     def del_email(self, m_id):
-        """  """
+        """Deletes email by ID (moves to bin)."""
         ...
 
-    # FA.4
-    # 
     def filter(self, frm):
-        """  """
+        """Displays all emails from the given sender."""
         try:
             if not frm:
                 raise ValueError('Invalid mailbox')
@@ -123,6 +111,7 @@ class MailboxAgent:
             print(f'Error: {er}')
 
     def sort_from(self):
+        """Sorts emails by sender and saves to file."""
         sorted_emails = sorted(self._mailbox, key=lambda mail: mail.frm.lower())
         with open("sorted_mailbox.txt", "w") as f:
             for email in sorted_emails:
@@ -132,8 +121,8 @@ class MailboxAgent:
                 f.write("\n\n")
         print('Sorted and saved to <sorted_mailbox>')
 
-
     def sort_conf_from(self):
+        """Sorts only confidential emails by sender and saves to file."""
         sorted_emails = sorted(self._mailbox, key=lambda mail: mail.frm.lower())
         with open("sorted_mailbox_confidential_only.txt", "w") as f:
             for email in sorted_emails:
@@ -143,23 +132,13 @@ class MailboxAgent:
                     f.write("\n\n")
         print('Sorted and saved to <sorted_mailbox_confidential_only>')
 
-
-
-
-    def find_by(self):
-        ...
-
-# FEATURES B (Partner B)
-    # FB.1 – show all emails in the mailbox
     def show_emails(self):
-        """Show every email in the mailbox"""
+        """Prints all emails in the mailbox."""
         for mail in self._mailbox:
             mail.show_email()
 
-    # FB.2
-    # 
     def mv_email(self, m_id, tag):
-        """Move email with this index to a new tag"""
+        """Moves email with given ID to a new tag."""
         try:
             idx = int(m_id)
             if 0 <= idx < len(self._mailbox):
@@ -167,10 +146,8 @@ class MailboxAgent:
         except ValueError:
             print("Error: ID must be a number")
 
-    # FB.3
-    # 
     def mark(self, m_id, m_type):
-        """Mark email as 'read' or 'flagged'"""
+        """Marks email as read or flagged."""
         try:
             idx = int(m_id)
             if 0 <= idx < len(self._mailbox):
@@ -182,47 +159,36 @@ class MailboxAgent:
         except ValueError:
             print("Error: ID must be a number")
 
-    # FB.4 – find all emails with a given date
     def find(self, date):
-        """Return a list of emails received on this date"""
+        """Returns list of emails received on the given date."""
         result = []
-
         for mail in self._mailbox:
             if mail.date == date:
                 result.append(mail)
-
         return result
 
-    # FB.5
-    # 
-    def sort_date(self):
-        """  """
-        pass
-
-
-# FEATURE 6 (Partners A and B)
-
     def add_email(self, *args):
-        """  """
-        #----------------------------------------------------------------------------------
-        # max_id = -1
-        # for mail in self._mailbox:
-        #     try:
-        #         current = int(mail.m_id)
-        #         if current > max_id:
-        #             max_id = current
-        #     except ValueError:
-        #         continue
-        # id = str(max_id + 1)
-        #----------------------------------------------------------------------------------
+        # ----------------------------------------------------------------------------------
+        max_id = -1
+        for mail in self._mailbox:
+            try:
+                current = int(mail.m_id)
+                if current > max_id:
+                    max_id = current
+            except ValueError:
+                continue
+        id = str(max_id + 1)
 
+        # or we can do unique id
+        # id = str(uuid.uuid4())
+        # ----------------------------------------------------------------------------------
 
+        """Adds a new email to the mailbox."""
         frm, to, date, subject, tag = args[:5]
         body = ''.join(args[5:]).replace('%','')
-        id = str(uuid.uuid4())
+
         _email_obj = []
         match tag:
-            # FA.6
             case 'CONFIDENTIAL':
                 email_obj = Confidential(id,frm, to, date, subject, tag, body)
                 _body_temp = [{
@@ -234,26 +200,19 @@ class MailboxAgent:
                     for i in _body_temp:
                         test_mailbox.write(f"\n{(str(i))}\n")
                 print('Saved into txt as a <Confidential email>')
-
-            # FB.6
-        #------------------------------------------------------------------------------------------------------------
-
-            # FB.6 – Partner B: create Personal email when tag is 'prsnl'
-            case 'prsnl':    # executed when tag is 'prsnl'
+            case 'PERSONAL':
                 email_obj = Personal(id, frm, to, date, subject, "PERSONAL", body)
                 self._mailbox.append(email_obj)
-        # ------------------------------------------------------------------------------------------------------------
-
-            # FA&B.6
             case _:
                 email_obj = Mail(id,frm, to, date, subject, tag, body)
                 self._mailbox.append(email_obj)
                 print('Saved into txt ')
-
-        # self._mailbox.append(email_obj)
         with open('test_mailbox.txt', 'a') as test_mailbox:
             test_mailbox.write(email_obj.__str__())
+
 
     # add email1223@gre.ac.uk email723@gre.ac.uk 29/5/2025 subject99 CONFIDENTIAL %%Body99911. Isfeo afwco sxzmp.
     # add email142@gre.ac.uk email788@gre.ac.uk 29/5/2025 subject88 PERSONAL %%Body11332. Isfffffeo sxzmp.
     # add email116@gre.ac.uk email142@gre.ac.uk 29/5/2025 subject36 tag1 %%Body:Body68. Wods vmm tskgdrxzrk.
+
+

@@ -9,28 +9,25 @@
 ##################################################################################################
 
 
-# DO NOT CHANGE CLASS OR METHOD NAMES
-# replace "pass" with your own code as specified in the CW spec.
-
 from pprint import pprint, pformat
 
 class Mail:
-    """Basic email class that stores sender, receiver, date, subject, tag, body and simple flags."""
-    # DO NOT CHANGE CLASS OR METHOD NAMES
+    """Basic email class storing sender, receiver, subject, date, tag, body, and flags."""
+
     def __init__(self,m_id,frm,to,date,subject,tag,body):
+        """Initializes a Mail object with all basic attributes."""
         self._m_id = m_id
         self._frm = frm
         self._to = to
         self._subject = subject
         self._date = date
-        self._tag = tag      # reference to Outlook mail folder email is stored in
-                             # e.g. tag0 = inbox, tag1 = bin, tag2 = private, tag3 = bank_acct, tag4 = COMP1811, etc.
+        self._tag = tag      # folder tag
         self._body = body
-        self._flag = False   # Boolean indicating whether email is important
-        self._read = False   # Boolean indicating whether the email is read or not.
+        self._flag = False   # True if important
+        self._read = False   # True if read
 
-    # Format should be done from pretty print.
     def __str__(self):
+        """Returns a pretty-printed string representation of the email."""
         mail_dict = {
             'ID': self._m_id,
             'From': self._frm,
@@ -47,58 +44,66 @@ class Mail:
 
     @property
     def m_id(self):
+        """Returns email ID."""
         return self._m_id
 
     @property
     def frm(self):
+        """Returns sender of the email."""
         return self._frm
 
     @property
     def to(self):
+        """Returns receiver of the email."""
         return self._to
 
     @property
     def date(self):
+        """Returns date of the email."""
         return self._date
 
     @property
     def body(self):
+        """Returns body text of the email."""
         return self._body
 
     @property
     def subject(self):
+        """Returns subject of the email."""
         return self._subject
 
     @property
     def tag(self):
+        """Returns tag/folder of the email."""
         return self._tag
 
     @property
     def read(self):
+        """Returns read status of the email."""
         return self._read
 
     @property
     def flag(self):
+        """Returns flag status of the email."""
         return self._flag
 
     @tag.setter
-    # Pre: value in tags.
     def tag(self, value):
+        """Sets the tag/folder of the email."""
         self._tag = value
 
     @read.setter
     def read(self,value):
+        """Sets the read status of the email."""
         self._read = value
 
     @flag.setter
     def flag(self,value):
+        """Sets the flag status of the email."""
         self._flag = value
 
-# FEATURES A (Partner A)
-    # FA.2
-    #
     def show_email(self):
-        """Print the email in a nice formatted view."""
+        """Prints the email in a formatted view based on type."""
         email_type = self._tag.lower()
 
         if email_type == "confidential":
@@ -111,6 +116,7 @@ class Mail:
             header = "EMAIL"
             body_label = "Body"
 
+        # Create the dictionary
         mail_dict = {
             "ID": self._m_id,
             "From": self._frm,
@@ -123,10 +129,8 @@ class Mail:
             body_label: self._body
         }
 
-        pretty = pformat(mail_dict, indent=4, sort_dicts=False)
-
+        # ----- CLEAN PRINT (no {}, no quotes, no pformat) -----
         print(f"----- {header} START -----")
-        print(pretty)
+        for key, value in mail_dict.items():
+            print(f"{key}: {value}")
         print(f"----- {header} END -----")
-        # print(self)
-

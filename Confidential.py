@@ -12,14 +12,15 @@
 from Mail import *
 
 class Confidential(Mail):
-    """ """
+    """Represents a confidential email with encrypted body."""
 
-    def __init__(self, m_id,frm,to,date,subject,tag,body):    # DO NOT MODIFY Attributes
-        super().__init__(m_id,frm,to,date,subject,tag,body)   # Inherits attributes from parent class DO NOT MODIFY
+    def __init__(self, m_id, frm, to, date, subject, tag, body):
+        """Initializes a Confidential email and encrypts its body."""
+        super().__init__(m_id, frm, to, date, subject, tag, body)
         self._body = self.encrypt(body)
 
     def encrypt(self, body: str) -> str:
-        """ """
+        """Encrypts the body of the email using a simple algorithm."""
         res = []
         num_words = len(body.split())
 
@@ -43,7 +44,16 @@ class Confidential(Mail):
 
         return ''.join(res)
 
-    def display_conf(self):
-        print('S mur fiology encrypted')
+    # def display_conf(self):
+    #     def display_conf(mail):
+    #         print('S mur fiology encrypted')
+    #
+    #         d, m, y = mail.date.split("/")
+    #         return int(y), int(m), int(d)
+    #
+    #     sorted_box = sorted(mailbox, key=date_key, reverse=True)
+    #
+    #     for mail in sorted_box:
+    #         mail.show_email()
 
 

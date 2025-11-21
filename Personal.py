@@ -83,7 +83,7 @@ class Personal(Mail):
         sorted_box = sorted(mailbox, key=date_key, reverse=True)
 
         for mail in sorted_box:
-            mail.show_email()
+                mail.show_email()
 
 
 if __name__ == "__main__":
